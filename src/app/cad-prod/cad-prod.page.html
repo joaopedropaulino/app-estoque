@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons mode="ios" slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-weight: bold;">Produto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="titulo"><ion-title class="ion-text-center">Cadastro</ion-title></div>
+
+
+ <form class="forms" [formGroup]="formCadastro">
+
+  <ion-item>
+    <ion-label position="floating">Nome do Produto:</ion-label>
+    <ion-input formControlName="nome"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Quantidade:</ion-label>
+    <ion-input formControlName="quant"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Tipo:</ion-label>
+    <ion-input formControlName="tipo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Validade:</ion-label>
+    <ion-input formControlName="validade" placeholder="yyyy-MM-dd"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Codigo de Barra:</ion-label>
+    <ion-input formControlName="codBarra"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Preço:</ion-label>
+    <ion-input formControlName="preco" placeholder="Ex: R$5.90"></ion-input>
+  </ion-item>
+
+    <ion-button color="success" expand="full" (click)="salvarCadastro()">SALVAR</ion-button>
+
+ </form>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-footer>
